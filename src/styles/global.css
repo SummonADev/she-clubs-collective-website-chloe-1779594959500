@@ -1,0 +1,94 @@
+:root {
+  --burgundy: #530E02;
+  --burgundy-light: #6B1D0E;
+  --gold: #C9A84C;
+  --gold-dark: #B0902F;
+  --ivory: #FAF6F0;
+  --blush: #E8C4B8;
+  --blush-soft: #F2DED5;
+  --taupe: #8C7B6E;
+  --taupe-dark: #5A4E44;
+  --white: #ffffff;
+  --black: #1a0f0c;
+
+  --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  --container: 1200px;
+  --radius-sm: 6px;
+  --radius: 12px;
+  --radius-lg: 20px;
+
+  --shadow-sm: 0 2px 8px rgba(83, 14, 2, 0.06);
+  --shadow: 0 8px 30px rgba(83, 14, 2, 0.10);
+  --shadow-lg: 0 20px 60px rgba(83, 14, 2, 0.15);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--taupe-dark);
+  background-color: var(--ivory);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--burgundy);
+  letter-spacing: -0.01em;
+}
+
+p {
+  color: var(--taupe);
+  line-height: 1.7;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 0 20px;
+  }
+}

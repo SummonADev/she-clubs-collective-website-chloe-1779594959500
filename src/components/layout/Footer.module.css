@@ -1,0 +1,111 @@
+.footer {
+  background: var(--burgundy);
+  color: var(--ivory);
+  padding-top: 70px;
+  margin-top: 0;
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1.2fr 2fr;
+  gap: 60px;
+  padding-bottom: 50px;
+}
+
+.brand {
+  max-width: 320px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--ivory);
+  font-family: var(--font-serif);
+  margin-bottom: 18px;
+}
+
+.logoMark {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--gold);
+  color: var(--burgundy);
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  font-size: 1rem;
+}
+
+.logoText {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+.logoText em {
+  font-style: italic;
+  font-weight: 500;
+  color: var(--gold);
+}
+
+.tagline {
+  color: rgba(250, 246, 240, 0.7);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.colTitle {
+  font-family: var(--font-sans);
+  color: var(--gold);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.list li {
+  color: rgba(250, 246, 240, 0.8);
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: color 0.2s;
+}
+
+.list a {
+  color: rgba(250, 246, 240, 0.8);
+  transition: color 0.2s;
+}
+.list a:hover {
+  color: var(--gold);
+}
+
+.bottom {
+  border-top: 1px solid rgba(250, 246, 240, 0.1);
+  padding: 22px 0;
+  font-size: 0.85rem;
+  color: rgba(250, 246, 240, 0.55);
+}
+
+@media (max-width: 768px) {
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .cols {
+    grid-template-columns: 1fr 1fr;
+  }
+}

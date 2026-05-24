@@ -1,0 +1,135 @@
+.section {
+  padding: 130px 0;
+  background: var(--burgundy);
+  color: var(--ivory);
+  position: relative;
+  overflow: hidden;
+}
+
+.section::before {
+  content: '';
+  position: absolute;
+  top: -200px;
+  right: -200px;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(201, 168, 76, 0.15), transparent 70%);
+  pointer-events: none;
+}
+
+.head {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 70px;
+  position: relative;
+}
+
+.eyebrow {
+  display: inline-block;
+  background: rgba(201, 168, 76, 0.18);
+  color: var(--gold);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 7px 16px;
+  border-radius: 999px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(201, 168, 76, 0.3);
+}
+
+.headline {
+  font-size: clamp(2.2rem, 4.8vw, 3.6rem);
+  color: var(--ivory);
+  margin-bottom: 18px;
+}
+
+.headline em {
+  color: var(--gold);
+  font-style: italic;
+}
+
+.sub {
+  font-size: 1.1rem;
+  color: rgba(250, 246, 240, 0.8);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  position: relative;
+}
+
+.card {
+  background: rgba(250, 246, 240, 0.04);
+  border: 1px solid rgba(250, 246, 240, 0.1);
+  border-radius: var(--radius-lg);
+  padding: 36px 28px;
+  position: relative;
+  transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  background: rgba(250, 246, 240, 0.08);
+  border-color: rgba(201, 168, 76, 0.4);
+}
+
+.iconWrap {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+  color: var(--burgundy);
+  display: grid;
+  place-items: center;
+  margin-bottom: 24px;
+  box-shadow: 0 10px 30px rgba(201, 168, 76, 0.3);
+}
+
+.title {
+  font-size: 1.35rem;
+  color: var(--ivory);
+  margin-bottom: 12px;
+  line-height: 1.25;
+}
+
+.text {
+  font-size: 0.95rem;
+  color: rgba(250, 246, 240, 0.75);
+  line-height: 1.7;
+}
+
+.flourish {
+  position: absolute;
+  bottom: 0;
+  left: 36px;
+  right: 36px;
+  height: 2px;
+  background: linear-gradient(to right, var(--gold), transparent);
+  border-radius: 2px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.card:hover .flourish {
+  transform: scaleX(1);
+}
+
+@media (max-width: 1100px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .section {
+    padding: 80px 0;
+  }
+}
