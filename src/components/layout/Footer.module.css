@@ -32,6 +32,29 @@
   color: var(--taupe);
 }
 
+.socials {
+  display: flex;
+  gap: 16px;
+  margin-top: 4px;
+}
+
+.socialLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--burgundy);
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  padding: 8px 0;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s, opacity 0.2s;
+}
+
+.socialLink:hover {
+  border-bottom-color: var(--burgundy);
+  opacity: 0.85;
+}
+
 .cols {
   display: grid;
   grid-template-columns: 1fr 1fr;

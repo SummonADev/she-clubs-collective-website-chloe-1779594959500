@@ -12,6 +12,32 @@ export default function Footer() {
           <p className={styles.tagline}>
             Building together. Growing together. Rising together.
           </p>
+          <div className={styles.socials}>
+            <a
+              href="https://instagram.com/sheclubscollective"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.socialLink}
+              aria-label="Follow on Instagram"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.6"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
+              >
+                <rect x="3" y="3" width="18" height="18" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+              </svg>
+              <span>@sheclubscollective</span>
+            </a>
+          </div>
         </div>
 
         <div className={styles.cols}>
@@ -29,7 +55,15 @@ export default function Footer() {
             <ul className={styles.list}>
               <li>Washington, DC · MD · VA</li>
               <li>hello@sheclubs.co</li>
-              <li>@sheclubscollective</li>
+              <li>
+                <a
+                  href="https://instagram.com/sheclubscollective"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  @sheclubscollective
+                </a>
+              </li>
             </ul>
           </div>
         </div>

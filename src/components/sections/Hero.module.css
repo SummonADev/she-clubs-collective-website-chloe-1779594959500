@@ -2,14 +2,21 @@
   position: relative;
   background: var(--ivory);
   color: var(--burgundy);
-  padding: 200px 0 140px;
+  padding: 160px 0 140px;
   border-bottom: 1px solid var(--line);
+  overflow: hidden;
 }
 
 .inner {
   position: relative;
-  text-align: center;
-  max-width: 880px;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.copy {
+  max-width: 560px;
 }
 
 .eyebrow {
@@ -19,14 +26,14 @@
   font-weight: 400;
   letter-spacing: 0.32em;
   text-transform: uppercase;
-  margin-bottom: 40px;
+  margin-bottom: 36px;
 }
 
 .headline {
-  font-size: clamp(2.8rem, 7vw, 5.5rem);
+  font-size: clamp(2.6rem, 6vw, 5rem);
   color: var(--burgundy);
   line-height: 1.05;
-  margin-bottom: 36px;
+  margin-bottom: 32px;
   font-weight: 500;
   letter-spacing: -0.02em;
 }
@@ -38,18 +45,17 @@
 }
 
 .sub {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   color: var(--taupe);
   line-height: 1.7;
-  margin: 0 auto 48px;
-  max-width: 600px;
+  margin-bottom: 44px;
+  max-width: 500px;
 }
 
 .actions {
   display: flex;
   gap: 24px;
   flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
 }
 
@@ -86,6 +92,60 @@
   opacity: 0.6;
 }
 
+.imageWrap {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  width: 100%;
+  max-width: 480px;
+  margin-left: auto;
+}
+
+.imageWrap::before {
+  content: '';
+  position: absolute;
+  inset: 24px -24px -24px 24px;
+  background: var(--blush);
+  opacity: 0.55;
+  z-index: 0;
+}
+
+.image {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.92) contrast(0.98);
+}
+
+.imageBadge {
+  position: absolute;
+  bottom: -24px;
+  left: -24px;
+  z-index: 2;
+  background: var(--ivory);
+  border: 1px solid var(--line);
+  padding: 18px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.badgeNumber {
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--taupe);
+}
+
+.badgeYear {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.4rem;
+  color: var(--burgundy);
+}
+
 .scrollHint {
   position: absolute;
   bottom: 40px;
@@ -108,11 +168,21 @@
   opacity: 0.5;
 }
 
-@media (max-width: 640px) {
-  .hero {
-    padding: 150px 0 100px;
+@media (max-width: 900px) {
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+  .imageWrap {
+    margin: 0 auto;
   }
   .scrollHint {
     display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 130px 0 100px;
   }
 }
