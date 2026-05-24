@@ -20,8 +20,8 @@ export default function Hero() {
         </div>
         <div className={styles.imageWrap}>
           <img
-            src="https://images.unsplash.com/photo-1529068755536-a5ade0dcb4e8?auto=format&fit=crop&w=900&q=80"
-            alt="Women connecting and building together"
+            src="/logo.png"
+            alt="She Clubs Collective"
             className={styles.image}
           />
           <div className={styles.imageBadge}>
