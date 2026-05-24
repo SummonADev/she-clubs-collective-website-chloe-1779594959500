@@ -23,11 +23,8 @@ export default function Header() {
   return (
     <header className={clsx(styles.header, scrolled && styles.scrolled)}>
       <div className={clsx('container', styles.inner)}>
-        <Link to="/" className={styles.logo}>
-          <span className={styles.logoMark}>SC</span>
-          <span className={styles.logoText}>
-            She Clubs <em>Collective</em>
-          </span>
+        <Link to="/" className={styles.logo} aria-label="She Clubs Collective">
+          <img src="/logo.svg" alt="She Clubs Collective" className={styles.logoImg} />
         </Link>
 
         <nav className={clsx(styles.nav, open && styles.navOpen)}>
@@ -39,7 +36,7 @@ export default function Header() {
           <NavLink to="/events" className={({ isActive }) => clsx(styles.link, isActive && styles.active)}>
             Events
           </NavLink>
-          <a href="/#join" className={styles.cta}>Join the Collective</a>
+          <a href="/#join" className={styles.cta}>Join</a>
         </nav>
 
         <button
@@ -47,7 +44,7 @@ export default function Header() {
           onClick={() => setOpen((v) => !v)}
           aria-label="Toggle menu"
         >
-          {open ? <X size={24} /> : <Menu size={24} />}
+          {open ? <X size={22} /> : <Menu size={22} />}
         </button>
       </div>
     </header>

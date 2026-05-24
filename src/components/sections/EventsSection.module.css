@@ -1,99 +1,91 @@
 .section {
-  padding: 120px 0;
+  padding: 140px 0;
   background: var(--ivory);
+  border-bottom: 1px solid var(--line);
 }
 
 .head {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-bottom: 56px;
+  margin-bottom: 70px;
   gap: 24px;
+  flex-wrap: wrap;
 }
 
 .eyebrow {
-  display: inline-block;
-  background: var(--blush);
-  color: var(--burgundy);
+  display: block;
+  color: var(--taupe);
   font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.25em;
   text-transform: uppercase;
-  padding: 7px 16px;
-  border-radius: 999px;
-  margin-bottom: 18px;
+  margin-bottom: 24px;
 }
 
 .headline {
-  font-size: clamp(2.2rem, 4.5vw, 3.4rem);
-  margin-bottom: 12px;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  margin-bottom: 16px;
+  font-weight: 500;
+  line-height: 1.05;
+}
+
+.headline em {
+  font-style: italic;
 }
 
 .sub {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   color: var(--taupe);
 }
 
 .headerCta {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
   color: var(--burgundy);
-  font-weight: 600;
-  padding-bottom: 6px;
-  border-bottom: 2px solid var(--gold);
-  transition: gap 0.2s;
+  font-size: 0.9rem;
+  border-bottom: 1px solid var(--burgundy);
+  padding-bottom: 2px;
+  transition: opacity 0.2s;
 }
 
 .headerCta:hover {
-  gap: 12px;
+  opacity: 0.6;
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  margin-bottom: 50px;
+  gap: 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
 }
 
 .bottom {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
 }
 
 .cta {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  background: var(--gold);
-  color: var(--burgundy);
-  padding: 16px 32px;
-  border-radius: 999px;
-  font-weight: 600;
-  font-size: 1rem;
-  transition: transform 0.2s, background 0.2s;
-  box-shadow: 0 8px 24px rgba(201, 168, 76, 0.3);
+  background: var(--burgundy);
+  color: var(--ivory);
+  padding: 16px 36px;
+  font-weight: 500;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: background 0.2s;
 }
 
 .cta:hover {
-  background: #d6b85a;
-  transform: translateY(-2px);
+  background: var(--burgundy-light);
 }
 
-@media (max-width: 960px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .head {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-
-@media (max-width: 640px) {
+@media (max-width: 900px) {
   .grid {
     grid-template-columns: 1fr;
   }
   .section {
-    padding: 80px 0;
+    padding: 90px 0;
   }
 }

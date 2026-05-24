@@ -4,16 +4,13 @@
   left: 0;
   right: 0;
   z-index: 100;
-  background: var(--burgundy);
-  transition: all 0.3s ease;
+  background: var(--ivory);
+  transition: border-color 0.3s ease;
   border-bottom: 1px solid transparent;
 }
 
 .scrolled {
-  background: rgba(83, 14, 2, 0.97);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+  border-bottom-color: var(--line);
 }
 
 .inner {
@@ -26,80 +23,57 @@
 .logo {
   display: flex;
   align-items: center;
-  gap: 12px;
-  color: var(--ivory);
-  font-family: var(--font-serif);
-}
-
-.logoMark {
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  background: var(--gold);
   color: var(--burgundy);
-  display: grid;
-  place-items: center;
-  font-weight: 800;
-  font-size: 1rem;
-  letter-spacing: -0.02em;
 }
 
-.logoText {
-  font-size: 1.15rem;
-  font-weight: 700;
-  letter-spacing: 0.01em;
-}
-
-.logoText em {
-  font-style: italic;
-  font-weight: 500;
-  color: var(--gold);
+.logoImg {
+  height: 56px;
+  width: auto;
+  color: var(--burgundy);
 }
 
 .nav {
   display: flex;
   align-items: center;
-  gap: 36px;
+  gap: 38px;
 }
 
 .link {
-  color: var(--ivory);
-  font-size: 0.95rem;
-  font-weight: 500;
-  opacity: 0.85;
-  transition: opacity 0.2s, color 0.2s;
+  color: var(--taupe-dark);
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  transition: color 0.2s;
   position: relative;
 }
 
 .link:hover {
-  opacity: 1;
-  color: var(--gold);
+  color: var(--burgundy);
 }
 
 .active {
-  opacity: 1;
-  color: var(--gold);
+  color: var(--burgundy);
 }
 
 .cta {
-  background: var(--gold);
   color: var(--burgundy);
-  padding: 12px 22px;
-  border-radius: 999px;
-  font-weight: 600;
-  font-size: 0.92rem;
-  letter-spacing: 0.01em;
-  transition: transform 0.2s, background 0.2s;
+  border: 1px solid var(--burgundy);
+  padding: 10px 22px;
+  font-weight: 500;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: background 0.2s, color 0.2s;
 }
 
 .cta:hover {
-  background: #d6b85a;
-  transform: translateY(-1px);
+  background: var(--burgundy);
+  color: var(--ivory);
 }
 
 .menuBtn {
   display: none;
-  color: var(--ivory);
+  color: var(--burgundy);
 }
 
 @media (max-width: 900px) {
@@ -108,14 +82,14 @@
     top: 78px;
     left: 0;
     right: 0;
-    background: var(--burgundy);
+    background: var(--ivory);
     flex-direction: column;
     align-items: stretch;
     padding: 24px;
     gap: 18px;
     transform: translateY(-150%);
     transition: transform 0.3s ease;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid var(--line);
   }
   .navOpen {
     transform: translateY(0);

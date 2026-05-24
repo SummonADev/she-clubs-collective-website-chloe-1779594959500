@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <circle cx="100" cy="100" r="96" stroke="currentColor" stroke-width="2"/>
+  <text x="100" y="92" text-anchor="middle" font-family="Playfair Display, Georgia, serif" font-size="42" font-style="italic" font-weight="500" fill="currentColor" letter-spacing="1">She</text>
+  <line x1="55" y1="108" x2="145" y2="108" stroke="currentColor" stroke-width="1.5"/>
+  <text x="100" y="132" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" font-weight="500" letter-spacing="4" fill="currentColor">CLUBS</text>
+  <text x="100" y="154" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" font-weight="400" letter-spacing="3" fill="currentColor">COLLECTIVE</text>
+</svg>

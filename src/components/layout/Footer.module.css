@@ -1,56 +1,35 @@
 .footer {
-  background: var(--burgundy);
-  color: var(--ivory);
-  padding-top: 70px;
-  margin-top: 0;
+  background: var(--ivory);
+  color: var(--taupe-dark);
+  border-top: 1px solid var(--line);
+  padding-top: 80px;
 }
 
 .inner {
   display: grid;
-  grid-template-columns: 1.2fr 2fr;
-  gap: 60px;
-  padding-bottom: 50px;
+  grid-template-columns: 1.2fr 1.6fr;
+  gap: 80px;
+  padding-bottom: 60px;
 }
 
 .brand {
-  max-width: 320px;
-}
-
-.logo {
   display: flex;
-  align-items: center;
-  gap: 12px;
-  color: var(--ivory);
-  font-family: var(--font-serif);
-  margin-bottom: 18px;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.logoMark {
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  background: var(--gold);
+.logo img {
+  height: 64px;
+  width: auto;
   color: var(--burgundy);
-  display: grid;
-  place-items: center;
-  font-weight: 800;
-  font-size: 1rem;
-}
-
-.logoText {
-  font-size: 1.15rem;
-  font-weight: 700;
-}
-.logoText em {
-  font-style: italic;
-  font-weight: 500;
-  color: var(--gold);
 }
 
 .tagline {
-  color: rgba(250, 246, 240, 0.7);
-  font-size: 0.95rem;
-  line-height: 1.7;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1rem;
+  max-width: 320px;
+  color: var(--taupe);
 }
 
 .cols {
@@ -61,51 +40,54 @@
 
 .colTitle {
   font-family: var(--font-sans);
-  color: var(--gold);
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.15em;
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.25em;
   text-transform: uppercase;
-  margin-bottom: 18px;
+  color: var(--taupe);
+  margin-bottom: 24px;
 }
 
 .list {
   list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
 }
 
 .list li {
-  color: rgba(250, 246, 240, 0.8);
   font-size: 0.95rem;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  transition: color 0.2s;
+  color: var(--burgundy);
 }
 
 .list a {
-  color: rgba(250, 246, 240, 0.8);
-  transition: color 0.2s;
+  transition: opacity 0.2s;
 }
+
 .list a:hover {
-  color: var(--gold);
+  opacity: 0.6;
 }
 
 .bottom {
-  border-top: 1px solid rgba(250, 246, 240, 0.1);
-  padding: 22px 0;
-  font-size: 0.85rem;
-  color: rgba(250, 246, 240, 0.55);
+  border-top: 1px solid var(--line);
+  padding: 24px 0;
 }
 
-@media (max-width: 768px) {
+.bottom p {
+  font-size: 0.82rem;
+  color: var(--taupe);
+  margin: 0;
+}
+
+@media (max-width: 760px) {
   .inner {
     grid-template-columns: 1fr;
     gap: 40px;
   }
   .cols {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+    gap: 30px;
   }
 }

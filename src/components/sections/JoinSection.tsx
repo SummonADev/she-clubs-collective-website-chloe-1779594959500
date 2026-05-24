@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { CheckCircle2, Send } from 'lucide-react';
 import styles from './JoinSection.module.css';
 
 type FormState = {
@@ -15,7 +14,6 @@ export default function JoinSection() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!form.name || !form.email || !form.role) return;
-    // Persist to localStorage so the entry survives a refresh (no backend connected).
     try {
       const existing = JSON.parse(localStorage.getItem('she_signups') || '[]');
       existing.push({ ...form, at: new Date().toISOString() });
@@ -30,25 +28,23 @@ export default function JoinSection() {
     <section className={styles.section} id="join">
       <div className={`container ${styles.inner}`}>
         <div className={styles.copy}>
-          <span className={styles.eyebrow}>Join Us</span>
+          <span className={styles.eyebrow}>— Join Us</span>
           <h2 className={styles.headline}>Ready to Find <em>Your People?</em></h2>
           <p className={styles.sub}>
             Join She Clubs Collective and step into a community of women who are building,
             growing, and showing up for each other every day.
           </p>
           <ul className={styles.perks}>
-            <li><CheckCircle2 size={18} /> First access to all events</li>
-            <li><CheckCircle2 size={18} /> Members-only founder gatherings</li>
-            <li><CheckCircle2 size={18} /> A real network of women who get it</li>
+            <li>First access to all events</li>
+            <li>Members-only founder gatherings</li>
+            <li>A real network of women who get it</li>
           </ul>
         </div>
 
         <div className={styles.formWrap}>
           {submitted ? (
             <div className={styles.success}>
-              <div className={styles.successIcon}>
-                <CheckCircle2 size={32} />
-              </div>
+              <span className={styles.successMark}>✓</span>
               <h3>You're in.</h3>
               <p>
                 Welcome to the Collective, {form.name.split(' ')[0]}. We'll be in touch with
@@ -62,7 +58,7 @@ export default function JoinSection() {
                   setForm({ name: '', email: '', role: '' });
                 }}
               >
-                Sign up another woman
+                Sign up another woman →
               </button>
             </div>
           ) : (
@@ -74,9 +70,7 @@ export default function JoinSection() {
                   type="text"
                   placeholder="Your full name"
                   value={form.name}
-                  onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                    setForm({ ...form, name: e.target.value })
-                  }
+                  onChange={(e) => setForm({ ...form, name: e.target.value })}
                   required
                 />
               </div>
@@ -87,9 +81,7 @@ export default function JoinSection() {
                   type="email"
                   placeholder="you@example.com"
                   value={form.email}
-                  onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                    setForm({ ...form, email: e.target.value })
-                  }
+                  onChange={(e) => setForm({ ...form, email: e.target.value })}
                   required
                 />
               </div>
@@ -98,7 +90,7 @@ export default function JoinSection() {
                 <select
                   id="role"
                   value={form.role}
-                  onChange={(e: React.ChangeEvent<HTMLSelectElement>) =>
+                  onChange={(e) =>
                     setForm({ ...form, role: e.target.value as FormState['role'] })
                   }
                   required
@@ -110,7 +102,7 @@ export default function JoinSection() {
                 </select>
               </div>
               <button type="submit" className={styles.submit}>
-                Count Me In <Send size={16} />
+                Count Me In
               </button>
               <p className={styles.privacy}>
                 We respect your inbox. No spam, just sisterhood.
