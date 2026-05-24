@@ -5,7 +5,7 @@ export default function Hero() {
     <section className={styles.hero}>
       <div className={`container ${styles.inner}`}>
         <div className={styles.copy}>
-          <span className={styles.eyebrow}>A DMV Women's Community</span>
+          <span className={styles.eyebrow}>A Women's Community</span>
           <h1 className={styles.headline}>
             You Don't Have to<br/><em>Build Alone.</em>
           </h1>
@@ -20,13 +20,13 @@ export default function Hero() {
         </div>
         <div className={styles.imageWrap}>
           <img
-            src="/hero.jpg"
-            alt="She Clubs Collective community"
+            src="https://images.unsplash.com/photo-1529068755536-a5ade0dcb4e8?auto=format&fit=crop&w=900&q=80"
+            alt="Women connecting and building together"
             className={styles.image}
           />
           <div className={styles.imageBadge}>
             <span className={styles.badgeNumber}>est.</span>
-            <span className={styles.badgeYear}>DMV</span>
+            <span className={styles.badgeYear}>2024</span>
           </div>
         </div>
       </div>

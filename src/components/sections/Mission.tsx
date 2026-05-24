@@ -13,7 +13,7 @@ export default function Mission() {
             She Clubs Collective was born from a simple truth — <em>women go further together.</em>
           </p>
           <p className={styles.body}>
-            Based in the DMV, we create intentional space for women who are building — whether
+            We create intentional space for women who are building — whether
             that's a business, a career, or a better version of themselves.
           </p>
           <p className={styles.body}>
