@@ -14,7 +14,7 @@ export default function Footer() {
           </p>
           <div className={styles.socials}>
             <a
-              href="https://instagram.com/sheclubscollective"
+              href="https://www.instagram.com/she.clubs/"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.socialLink}
@@ -35,7 +35,7 @@ export default function Footer() {
                 <circle cx="12" cy="12" r="4" />
                 <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
               </svg>
-              <span>@sheclubscollective</span>
+              <span>@she.clubs</span>
             </a>
           </div>
         </div>
@@ -53,15 +53,14 @@ export default function Footer() {
           <div>
             <h4 className={styles.colTitle}>Connect</h4>
             <ul className={styles.list}>
-              <li>Washington, DC · MD · VA</li>
-              <li>hello@sheclubs.co</li>
+              <li><a href="mailto:chloe@sheclubscollective.com">chloe@sheclubscollective.com</a></li>
               <li>
                 <a
-                  href="https://instagram.com/sheclubscollective"
+                  href="https://www.instagram.com/she.clubs/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  @sheclubscollective
+                  @she.clubs
                 </a>
               </li>
             </ul>
@@ -70,7 +69,7 @@ export default function Footer() {
       </div>
       <div className={styles.bottom}>
         <div className="container">
-          <p>© {new Date().getFullYear()} She Clubs Collective. Made in the DMV.</p>
+          <p>© {new Date().getFullYear()} She Clubs Collective. All rights reserved.</p>
         </div>
       </div>
     </footer>
